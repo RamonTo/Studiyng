@@ -1,0 +1,20 @@
+String 
+
+boolean contains(CharSequence s) — проверяет, содержит ли строка заданную последовательность символов
+String[] split(String regex),  который разбивает строку на основании заданного регулярного выражения.
+String substring(int beginIndex, int endIndex) или  substring(int beginIndex) — возвращает новую строку, которая является подстрокой используемой строки
+indexOf(String str, int fromIndex) — метод indexOf применяется для поиска первого вхождения указанного символа в строке или первого вхождения указанной подстроки.
+toLowerCase() — преобразовать строку в нижний регистр;
+toUpperCase() — преобразовать строку в верхний регистр;
+trim() — отсечь на концах строки пустые символы;
+boolean equals(Object anObject) — проверяет идентичность строк.
+
+String substr = "/portmone/simple/";
+List<WebElement> weList = driver.findElements(By.xpath(".//ul[@class='payments-list']/li"));
+Iterator<WebElement> iter = weList.iterator();
+while (iter.hasNext()){
+    WebElement we = iter.next();
+    if (we.getAttribute("data-href").contains(substr)){
+                System.out.println(we.getAttribute("data-href") + " contains " + substr);
+     }
+}
